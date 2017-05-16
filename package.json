@@ -1,0 +1,56 @@
+{
+  "bugs": {
+    "url": "https://github.com/alarner/perk/issues"
+  },
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "bunyan-prettystream": "^0.1.3",
+    "chokidar": "^1.6.1",
+    "clean-css": "^3.4.21",
+    "config-loader": "alarner/config-loader",
+    "consolidate": "^0.14.5",
+    "ejs": "~2.5.2",
+    "express": "~4.14.0",
+    "node-sass": "^3.13.0",
+    "sass-graph": "^2.1.2",
+    "serve-favicon": "~2.3.2",
+    "webpack": "^1.13.3",
+    "winston": "^2.3.1"
+  },
+  "description": "A well documented set of tools for building node web applications.",
+  "devDependencies": {
+    "eslint": "^3.11.0",
+    "eslint-plugin-react": "^6.7.1"
+  },
+  "homepage": "http://perkframework.com",
+  "license": "MIT",
+  "main": "app.js",
+  "maintainers": [
+    {
+      "email": "anlarner@gmail.com",
+      "name": "Aaron Larner"
+    }
+  ],
+  "name": "perk",
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alarner/perk.git"
+  },
+  "engines": {
+    "node": "6.6.0"
+  },
+  "scripts": {
+    "test": "eslint ./ && mocha",
+    "dev": "NODE_ENV=development node --use_strict ./bin/build --watch --scripts --styles --server",
+    "build": "./bin/build-prod",
+    "eslint": "eslint ./ || true"
+  },
+  "version": "1.0.2"
+}
