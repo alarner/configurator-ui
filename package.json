@@ -25,12 +25,13 @@
   },
   "description": "A well documented set of tools for building node web applications.",
   "devDependencies": {
+    "electron": "^1.6.7",
     "eslint": "^3.11.0",
     "eslint-plugin-react": "^6.7.1"
   },
   "homepage": "http://perkframework.com",
   "license": "MIT",
-  "main": "app.js",
+  "main": "./public/main.js",
   "maintainers": [
     {
       "email": "anlarner@gmail.com",
@@ -49,6 +50,7 @@
   "scripts": {
     "test": "eslint ./ && mocha",
     "dev": "NODE_ENV=development node --use_strict ./bin/build --watch --scripts --styles --server",
+    "electron": "electron .",
     "build": "./bin/build-prod",
     "eslint": "eslint ./ || true"
   },

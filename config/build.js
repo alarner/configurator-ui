@@ -2,7 +2,7 @@ module.exports = {
 	scripts: {
 		loader: 'browserify',
 		files: [
-			'public/scripts/main.js'
+			'public/scripts/renderer.js'
 		]
 	},
 	styles: {
