@@ -1,0 +1,18 @@
+.form {
+	.form-row {
+		display: flex;
+		flex-direction: row;
+		padding: 0.5rem 0;
+	}
+
+	.form-row-label {
+		width: 9rem;
+		padding-right: 1rem;
+		text-align: right;
+	}
+
+	.form-row-field {
+		flex: 1;
+		margin-right: 1rem;
+	}
+}

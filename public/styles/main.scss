@@ -1,3 +1,21 @@
-.blue {
-	background: green;
+$fa-font-path: './font-awesome/fonts';
+@import './font-awesome/scss/font-awesome';
+@import '../../node_modules/rayon/src/styles/rayon';
+@import '../../node_modules/rayon/src/styles/theme';
+
+@import './colors';
+@import './form';
+
+@import './components/shared/Navigation';
+@import './components/shared/List';
+
+html, body, #app, .component {
+	font-family: 'Arial', Helvetica, sans-serif;
+	margin: 0;
+	height: 100%;
+}
+
+.component {
+	display: flex;
+	flex-direction: row;
 }

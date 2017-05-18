@@ -78,7 +78,8 @@ module.exports = function(files, minify, watch, cb) {
 		devtool: minify ? 'source-map' : 'inline-source-map',
 		watchOptions: {
 			poll: config.build.watching.poll ? config.build.watching.interval || 100 : undefined
-		}
+		},
+		target: 'electron-renderer'
 	});
 
 	if(watch) {

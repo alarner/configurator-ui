@@ -1,0 +1,18 @@
+@import '../../colors';
+
+.list {
+	padding: 0.5rem;
+
+	header {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.list-header-name {
+		flex: 1;
+		color: $color-heading;
+		text-transform: uppercase;
+		font-size: 13px;
+		font-weight: 600;
+	}
+}
