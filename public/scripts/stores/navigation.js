@@ -11,6 +11,33 @@ const Navigation = Store.build('navigation', d, {
 		run(resolve, reject, e, s) {
 			this.applyRoute(resolve, reject, e, s, '/');
 		}
+	},
+	add_configuration_set: {
+		// other stores that should process the click event before this one
+		dependencies: ['configuration_set'],
+		// the function that should run when the click happens
+		run(resolve, reject, e, s, results) {
+			if(results.configuration_set) {
+				this.applyRoute(resolve, reject, e, s, `/configuration-set/${results.configuration_set.get('id')}`);
+			}
+			else {
+				resolve(s);
+			}
+		}
+	},
+	add_server: {
+		// other stores that should process the click event before this one
+		dependencies: ['server'],
+		// the function that should run when the click happens
+		run(resolve, reject, e, s, results) {
+			if(results.server) {
+				console.log('navigation add_server', results.server.get('id'));
+				this.applyRoute(resolve, reject, e, s, `/server/${results.server.get('id')}`);
+			}
+			else {
+				resolve(s);
+			}
+		}
 	}
 });
 
@@ -99,7 +126,6 @@ Navigation.prototype = {
 	},
 	applyRoute(resolve, reject, event, state, defaultPath) {
 		const path = event.path || event.redirect || defaultPath;
-		console.log('applyRoute', path);
 		const route = this.setPage(path);
 		if(!route) {
 			return reject({ default: `There is no route that matches "${path}"` });

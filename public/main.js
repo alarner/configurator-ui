@@ -1,3 +1,13 @@
+const config = require('../lib/config');
+global.knex = require('knex')(config.database);
+global.bookshelf = require('bookshelf')(global.knex);
+global.bookshelf.plugin('registry');
+
+global.models = {
+	Server: require('../models/Server'),
+	ConfigurationSet: require('../models/ConfigurationSet')
+};
+
 const electron = require('electron');
 // Module to control application life.
 const app = electron.app;

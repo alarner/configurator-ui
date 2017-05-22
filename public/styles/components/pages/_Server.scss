@@ -1,0 +1,21 @@
+@import '../../colors';
+
+h2 {
+	color: $color-dark;
+	font-weight: 100;
+}
+
+.server-information {
+	background: darken($color-dark, 40%);
+	padding: 1rem;
+}
+
+.server-information-row {
+	display: flex;
+	padding-bottom: 0.5rem;
+
+	>div {
+		color: lighten($color-dark, 10%);
+		flex: 1;
+	}
+}

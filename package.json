@@ -10,6 +10,7 @@
     "babel-preset-react": "^6.16.0",
     "babel-register": "^6.18.0",
     "babelify": "^7.3.0",
+    "bookshelf": "^0.10.3",
     "browserify": "^13.1.1",
     "bunyan-prettystream": "^0.1.3",
     "chokidar": "^1.6.1",
@@ -28,12 +29,14 @@
     "sass-graph": "^2.1.2",
     "serve-favicon": "~2.3.2",
     "sqlite3": "^3.1.8",
+    "validator": "^7.0.0",
     "webpack": "^1.13.3",
     "winston": "^2.3.1"
   },
   "description": "A well documented set of tools for building node web applications.",
   "devDependencies": {
     "electron": "^1.6.7",
+    "electron-builder": "^17.10.0",
     "eslint": "^3.11.0",
     "eslint-plugin-react": "^6.7.1"
   },
@@ -60,7 +63,8 @@
     "dev": "NODE_ENV=development node --use_strict ./bin/build --watch --scripts --styles --server",
     "electron": "electron .",
     "build": "./bin/build-prod",
-    "eslint": "eslint ./ || true"
+    "eslint": "eslint ./ || true",
+    "postinstall": "install-app-deps"
   },
   "version": "1.0.2"
 }

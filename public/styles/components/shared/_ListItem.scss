@@ -1,0 +1,31 @@
+@import '../../colors';
+
+.list-item {
+	display: flex;
+	padding: 0.5rem;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $color-highlight;
+	}
+}
+
+.list-item-icon {
+	min-width: 1.75rem;
+	min-height: 1.75rem;
+	line-height: 1.75rem;
+	text-align: center;
+	border-radius: 100%;
+	background-color: lighten($color-heading, 30%);
+	color: $color-heading;
+}
+
+.list-item-name {
+	line-height: 1.75rem;
+	color: $color-heading;
+	padding-left: 0.5rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	// width: 9rem;
+}
