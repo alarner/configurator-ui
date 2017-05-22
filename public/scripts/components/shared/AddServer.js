@@ -121,12 +121,13 @@ export default class AddDroplet extends React.Component {
 	}
 
 	chooseSshKeyPath() {
-		this.setState({
-			sshKeyButtonLabel: dialog.showOpenDialog({
-				defaultPath: '~/.ssh',
-				properties: ['openFile', 'showHiddenFiles']
-			})
+		const sshKeyButtonLabel = dialog.showOpenDialog({
+			defaultPath: '~/.ssh',
+			properties: ['openFile', 'showHiddenFiles']
 		});
+		if(sshKeyButtonLabel && sshKeyButtonLabel.length) {
+			this.setState({ sshKeyButtonLabel: sshKeyButtonLabel[0] });
+		}
 	}
 
 };

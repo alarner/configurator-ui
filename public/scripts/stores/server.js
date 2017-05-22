@@ -9,7 +9,6 @@ const ServerStore = Store.build('server', d, {
 		dependencies: [],
 		// the function that should run when the click happens
 		run(resolve, reject, e, s) {
-			console.log('fetch_server', e);
 			Server
 			.forge({ id: e.id })
 			.fetch()

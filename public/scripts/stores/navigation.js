@@ -31,7 +31,6 @@ const Navigation = Store.build('navigation', d, {
 		// the function that should run when the click happens
 		run(resolve, reject, e, s, results) {
 			if(results.server) {
-				console.log('navigation add_server', results.server.get('id'));
 				this.applyRoute(resolve, reject, e, s, `/server/${results.server.get('id')}`);
 			}
 			else {
